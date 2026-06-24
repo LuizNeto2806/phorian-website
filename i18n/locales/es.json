@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "music": "Música",
+    "services": "Servicios",
+    "scroll": "Desplazarse hacia abajo"
+  },
+  "about": {
+    "label": "Acerca",
+    "title": "Phorian",
+    "body": [
+      "\"PHORIAN\" es un nombre inspirado en raíces del griego antiguo: φέρω (phérō), que significa \"cargar\", \"conducir\" o \"transportar\", y φορά (phorá), asociada al movimiento, impulso y transformación.",
+      "Más que un proyecto de música electrónica, es un universo artístico donde la música, la abstracción y la emoción se encuentran.",
+      "PHORIAN busca traducir atmósfera, humanidad, abstracción y sentimiento a través del sonido, la imagen y la expresión artística."
+    ],
+    "cta": "Detrás de PHORIAN"
+  },
+  "story": {
+    "label": "Acerca",
+    "title": "Detrás de PHORIAN",
+    "home": "Inicio",
+    "body": [
+      "Mi nombre es Luiz, creador del proyecto PHORIAN.",
+      "Nací en Recife, capital del estado de Pernambuco, en el noreste de Brasil, una ciudad ampliamente reconocida por su rica cultura, historia, arquitectura, música, gastronomía y por albergar uno de los carnavales más grandes del mundo.",
+      "Mirando hacia atrás, me doy cuenta de que estuve rodeado de arte desde muy temprana edad. Tanto en mi entorno familiar como en la cultura de la ciudad donde crecí, la música, la filosofía y una profunda curiosidad siempre estuvieron presentes. Esas influencias moldearon silenciosamente mi forma de ver el mundo y, con el tiempo, la forma en que hago música.",
+      "Como muchos niños, soñaba con convertirme en una estrella de rock.",
+      "Alrededor de los once años descubrí el mundo del rock y quedé fascinado por bandas como Led Zeppelin, The Beatles, Jimi Hendrix, Nirvana, Linkin Park y The Offspring. Un año después comencé a tomar clases de guitarra, una experiencia que me dio mi primera comprensión real de la teoría musical y la interpretación. Durante los años siguientes estudié con diferentes profesores, participé en pequeños conciertos y formé parte de diversos proyectos musicales.",
+      "Hacia el final de mi adolescencia descubrí la música electrónica, más específicamente el psytrance. En un momento en el que poco a poco perdía el interés por seguir el camino tradicional de un músico de rock, se abrió ante mí un horizonte completamente nuevo. Me sumergí en artistas como Astrix, Mandragora, Vini Vici y Liquid Soul, y decidí que quería convertirme en DJ y productor musical.",
+      "Después de varios años produciendo psytrance, mis intereses comenzaron a orientarse gradualmente hacia el techno. Poco a poco me encontré reduciendo el BPM y sintiéndome cada vez más atraído por su sentido del movimiento, el minimalismo y la atmósfera que transmite. Incluso hoy siento que el psytrance y el techno comparten algo fundamental bajo la superficie. Del mismo modo, siempre he percibido una conexión entre la música que amaba durante mi adolescencia y la música electrónica que terminó convirtiéndose en mi lenguaje artístico.",
+      "Pero la música nunca ha sido mi única fuente de inspiración.",
+      "Me apasionan profundamente la literatura, la filosofía, la meditación, la psicología, las artes visuales y los idiomas, además de actividades como el skate, el surf, el running y el entrenamiento físico. Con el paso de los años comprendí que todos estos intereses se alimentan mutuamente. Muchas de las ideas que dan forma a mi música nacen lejos del estudio: leyendo un libro, observando la naturaleza, practicando deporte o simplemente prestando atención a la vida cotidiana.",
+      "Mirando hacia atrás, PHORIAN parece menos algo que inventé y más algo que terminé descubriendo.",
+      "Nunca me resultó difícil definir su filosofía o dirección artística porque, de muchas maneras, ya se estaba formando mucho antes de que el proyecto existiera oficialmente.",
+      "Para mí, PHORIAN es simplemente la forma más honesta que he encontrado de expresar quién soy a través de la música."
+    ]
+  },
+  "music": {
+    "label": "Música",
+    "title": "Escuchar"
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Ghost Production y Co-Producción",
+    "body": [
+      "Ghost Production y Co-Producción para artistas que buscan música con profundidad, atmósfera e identidad.",
+      "Cada proyecto se elabora con atención al detalle, dirección emocional y funcionalidad para clubes.",
+      "Enfocado exclusivamente en Melodic Techno y Peak Time Techno."
+    ],
+    "cta": "Ponte en contacto",
+    "items": [
+      {
+        "title": "Ghost Production",
+        "description": "Composiciones originales producidas a medida, listas para su lanzamiento con total confidencialidad."
+      },
+      {
+        "title": "Co-Producción",
+        "description": "Desarrollo colaborativo de pistas, refinando ideas y elevando la producción al nivel deseado."
+      },
+      {
+        "title": "Producción Personalizada",
+        "description": "Proyectos únicos mediante briefing y contacto directo — de la concepción a la entrega final."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Creemos juntos",
+    "body": "Para proyectos musicales, colaboraciones o consultas profesionales."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

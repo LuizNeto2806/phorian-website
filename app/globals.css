@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f3e6d4;
+  --muted: #6f6f6f;
+  --border: rgba(243, 230, 212, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-archivo);
+  --font-display: var(--font-archivo);
+  --font-grotesk: var(--font-archivo);
+}
+
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+html:not(:has(.snap-root)) {
+  scroll-behavior: smooth;
+}
+
+html:has(.snap-root),
+html:has(.snap-root) body {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not(:has(.snap-root)) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+::selection {
+  background: rgba(243, 230, 212, 0.2);
+  color: var(--foreground);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
+
+.section-padding {
+  @apply px-5 py-16 sm:px-6 sm:py-24 md:px-12 md:py-32 lg:px-20;
+}
+
+.snap-root {
+  @apply h-svh overflow-x-hidden overflow-y-auto overscroll-y-contain;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snap-root {
+    scroll-snap-type: none;
+  }
+}
+
+.snap-section {
+  @apply relative flex h-svh snap-start snap-always flex-col px-5 py-16 sm:px-6 sm:py-20 md:px-12 md:py-32 lg:px-20;
+}
+
+@keyframes section-scroll-travel {
+  0% {
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(48px);
+    opacity: 0;
+  }
+}
+
+.section-scroll-travel {
+  animation: section-scroll-travel 3.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-scroll-travel {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.section-label {
+  @apply text-xs tracking-[0.35em] uppercase text-muted font-light;
+}
+
+.mobile-copy {
+  @apply break-words text-pretty leading-relaxed;
+}

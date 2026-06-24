@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "music": "Music",
+    "services": "Services",
+    "scroll": "Scroll down"
+  },
+  "about": {
+    "label": "About",
+    "title": "Phorian",
+    "body": [
+      "\"PHORIAN\" is a name inspired by roots from ancient Greek: φέρω (phérō), meaning \"to carry\", \"to lead\" or \"to transport\", and φορά (phorá), associated with movement, momentum and transformation.",
+      "More than an electronic music project, it is an artistic universe where music, abstraction and emotion meet.",
+      "PHORIAN seeks to translate atmosphere, humanity, abstraction and feeling through sound, image and artistic expression."
+    ],
+    "cta": "Behind PHORIAN"
+  },
+  "story": {
+    "label": "About",
+    "title": "Behind PHORIAN",
+    "home": "Home",
+    "body": [
+      "My name is Luiz, creator of the PHORIAN project.",
+      "I was born in Recife, the capital of Pernambuco in northeastern Brazil, a city widely known for its rich culture, history, architecture, music, gastronomy, and for hosting one of the largest carnivals in the world.",
+      "Looking back, I realize that I was surrounded by art from an early age. Through both my family environment and the culture of the city where I grew up, music, philosophy, and a strong sense of curiosity were always present. Those influences quietly shaped the way I see the world and, over time, the way I create music.",
+      "Like many children, I dreamed of becoming a rockstar.",
+      "Around the age of eleven, I discovered the world of rock music and became fascinated by bands such as Led Zeppelin, The Beatles, Jimi Hendrix, Nirvana, Linkin Park, and The Offspring. A year later, I started taking guitar lessons, an experience that gave me my first real understanding of music theory and performance. Over the following years, I studied with different teachers, played small shows, and participated in various musical projects.",
+      "Towards the end of my teenage years, I discovered electronic music, more specifically psytrance. At a time when I was gradually losing interest in pursuing the traditional path of a rock musician, an entirely new horizon opened before me. I immersed myself in artists such as Astrix, Mandragora, Vini Vici, and Liquid Soul, and decided that I wanted to become a DJ and music producer.",
+      "After years of producing psytrance, my interests gradually shifted toward techno. Little by little, I found myself lowering the BPM and becoming increasingly fascinated by its sense of movement, minimalism, and atmosphere. Even today, I feel that psytrance and techno share something fundamental beneath the surface. In the same way, I have always sensed a connection between the music I loved as a teenager and the electronic music that eventually became my artistic language.",
+      "But music has never been my only source of inspiration.",
+      "I am deeply passionate about literature, philosophy, meditation, psychology, visual arts, and languages, as well as activities such as skateboarding, surfing, running, and strength training. Over the years, I have realized that all of these interests constantly nourish one another. Many of the ideas that shape my music are born far away from the studio: while reading a book, observing nature, practicing sports, or simply paying attention to everyday life.",
+      "Looking back, PHORIAN feels less like something I invented and more like something I discovered.",
+      "I have never struggled to define its philosophy or artistic direction because, in many ways, it had already been taking shape long before the project itself existed.",
+      "To me, PHORIAN is simply the most honest way I have found to express who I am through music."
+    ]
+  },
+  "music": {
+    "label": "Music",
+    "title": "Listen"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Ghost Production & Co-Production",
+    "body": [
+      "Ghost Production and Co-Production for artists seeking music with depth, atmosphere and identity.",
+      "Each project is crafted with attention to detail, emotional direction and club functionality.",
+      "Focused exclusively on Melodic Techno and Peak Time Techno."
+    ],
+    "cta": "Get in touch",
+    "items": [
+      {
+        "title": "Ghost Production",
+        "description": "Original compositions produced to measure, ready for release with full confidentiality."
+      },
+      {
+        "title": "Co-Production",
+        "description": "Collaborative track development, refining ideas and elevating the production to the desired level."
+      },
+      {
+        "title": "Custom Production",
+        "description": "Unique projects through briefing and direct contact — from conception to final delivery."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's create together",
+    "body": "For musical projects, partnerships or professional inquiries."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
