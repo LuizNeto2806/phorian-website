@@ -86,6 +86,27 @@ body {
   @apply relative flex h-svh snap-start snap-always flex-col px-5 py-16 sm:px-6 sm:py-20 md:px-12 md:py-32 lg:px-20;
 }
 
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-fade {
+  opacity: 0;
+  animation: hero-fade-in 1.4s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 @keyframes section-scroll-travel {
   0% {
     transform: translateY(-16px);

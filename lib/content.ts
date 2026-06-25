@@ -50,16 +50,13 @@ export const socialLinks = [
   {
     name: "Instagram",
     href: "https://www.instagram.com/phorianmusic/",
-    label: "@phorianmusic",
   },
   {
     name: "YouTube",
     href: "https://music.youtube.com/channel/UC7hL-8dQKyBW3R4WvIkQm5A",
-    label: "PHORIAN",
   },
   {
     name: "Spotify",
     href: "https://open.spotify.com/artist/74mQ30zM7z480FlfSxODvv",
-    label: "PHORIAN",
   },
 ] as const;

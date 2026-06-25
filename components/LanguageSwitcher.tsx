@@ -10,12 +10,12 @@ export function LanguageSwitcher() {
   return (
     <nav
       aria-label="Language"
-      className="flex items-center gap-1.5 text-[0.6875rem] tracking-[0.28em] uppercase sm:gap-2"
+      className="flex h-11 items-center gap-1 text-sm font-normal tracking-[0.28em] text-white uppercase md:h-auto md:gap-1.5 md:text-[0.6875rem]"
     >
       {locales.map((code, index) => (
         <Fragment key={code}>
           {index > 0 && (
-            <span aria-hidden="true" className="text-muted/50">
+            <span aria-hidden="true" className="text-white/50">
               ·
             </span>
           )}
@@ -23,8 +23,8 @@ export function LanguageSwitcher() {
             type="button"
             onClick={() => setLocale(code)}
             aria-current={locale === code ? "true" : undefined}
-            className={`inline-flex min-h-11 min-w-9 items-center justify-center px-1 opacity-100 transition-opacity duration-300 ease-out hover:opacity-60 sm:min-w-0 ${
-              locale === code ? "text-foreground" : "text-muted"
+            className={`inline-flex min-h-11 min-w-7 items-center justify-center px-0.5 transition-opacity duration-300 ease-out hover:opacity-100 md:min-h-0 md:min-w-0 md:px-0 ${
+              locale === code ? "opacity-100" : "opacity-70"
             }`}
           >
             {localeLabels[code]}

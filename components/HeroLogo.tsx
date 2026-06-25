@@ -1,12 +1,18 @@
-export function HeroLogo() {
+type HeroLogoProps = {
+  className?: string;
+};
+
+export function HeroLogo({
+  className = "block h-auto w-full invert",
+}: HeroLogoProps) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src="/images/phorian-logo.svg"
       alt="PHORIAN"
-      width={280}
-      height={224}
-      className="mx-auto h-auto w-full invert"
+      width={354}
+      height={283}
+      className={className}
     />
   );
 }

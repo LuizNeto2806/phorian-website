@@ -3,6 +3,7 @@
 import { siteConfig, socialLinks } from "@/lib/content";
 import { useI18n } from "@/i18n/I18nProvider";
 import { Button } from "./Button";
+import { PlatformIcon } from "./PlatformIcon";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function Contact() {
@@ -39,21 +40,20 @@ export function Contact() {
         </ScrollReveal>
 
         <ScrollReveal delay={400}>
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-6 sm:mt-12 sm:gap-8 md:justify-start">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:mt-12 md:justify-start md:gap-x-10">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-11 flex-col items-center justify-center gap-1 underline-offset-[0.3em] decoration-transparent transition-all duration-300 ease-out hover:opacity-60 hover:underline hover:decoration-foreground/35 md:items-start"
+                aria-label={link.name}
+                className="opacity-75 transition-opacity duration-500 ease-out hover:opacity-100"
               >
-                <span className="text-xs tracking-[0.2em] uppercase text-muted">
-                  {link.name}
-                </span>
-                <span className="text-sm font-light text-foreground">
-                  {link.label}
-                </span>
+                <PlatformIcon
+                  name={link.name}
+                  className="h-4 w-4 text-foreground sm:h-[1.125rem] sm:w-[1.125rem]"
+                />
               </a>
             ))}
           </div>
