@@ -3,16 +3,31 @@ import path from "node:path";
 import sharp from "sharp";
 
 const root = process.cwd();
-const markSvg = fs.readFileSync(
-  path.join(root, "public/images/phorian-symbol-mark.svg"),
-);
+const faviconSvgPath = path.join(root, "app/icon.svg");
+const ogSymbolSvgPath = path.join(root, "public/images/phorian-symbol.svg");
 
-async function writePng(outputPath, width, height = width) {
-  await sharp(markSvg).resize(width, height, { fit: "contain" }).png().toFile(outputPath);
+const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
+
+const faviconSvg = fs.readFileSync(faviconSvgPath);
+const ogSymbolSvg = fs.readFileSync(ogSymbolSvgPath);
+
+async function writePng(outputPath, size) {
+  const density = Math.min(144, Math.max(72, size * 2));
+
+  await sharp(faviconSvg, { density, limitInputPixels: false })
+    .resize(size, size, {
+      fit: "contain",
+      background: transparent,
+    })
+    .png()
+    .toFile(outputPath);
 }
 
 async function writeOgImage(outputPath) {
-  const symbol = await sharp(markSvg).resize(420, 420, { fit: "contain" }).png().toBuffer();
+  const symbol = await sharp(ogSymbolSvg, { density: 300 })
+    .resize(420, 420, { fit: "contain", background: transparent })
+    .png()
+    .toBuffer();
 
   await sharp({
     create: {
@@ -27,15 +42,24 @@ async function writeOgImage(outputPath) {
     .toFile(outputPath);
 }
 
+const pngSizes = [
+  { file: "public/favicon-16x16.png", size: 16 },
+  { file: "public/favicon-32x32.png", size: 32 },
+  { file: "public/favicon-48x48.png", size: 48 },
+  { file: "public/apple-icon.png", size: 180 },
+  { file: "app/apple-icon.png", size: 180 },
+  { file: "public/icon-192x192.png", size: 192 },
+  { file: "public/icon-512x512.png", size: 512 },
+];
+
 await fs.promises.mkdir(path.join(root, "app"), { recursive: true });
 await fs.promises.mkdir(path.join(root, "public"), { recursive: true });
 
-await writePng(path.join(root, "app/icon.png"), 512);
-await writePng(path.join(root, "app/apple-icon.png"), 180);
-await writePng(path.join(root, "public/apple-icon.png"), 180);
-await writePng(path.join(root, "public/favicon-32x32.png"), 32);
-await writePng(path.join(root, "public/favicon-16x16.png"), 16);
+for (const { file, size } of pngSizes) {
+  await writePng(path.join(root, file), size);
+}
+
 await writeOgImage(path.join(root, "public/og-image.png"));
 await writeOgImage(path.join(root, "app/opengraph-image.png"));
 
-console.log("Brand assets generated.");
+console.log("Favicon assets generated from public/images/phorian-symbol.svg");
