@@ -11,6 +11,11 @@ const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
 const faviconSvg = fs.readFileSync(faviconSvgPath);
 const ogSymbolSvg = fs.readFileSync(ogSymbolSvgPath);
 
+await fs.promises.mkdir(path.join(root, "app"), { recursive: true });
+await fs.promises.mkdir(path.join(root, "public"), { recursive: true });
+
+await fs.promises.copyFile(faviconSvgPath, path.join(root, "public/icon.svg"));
+
 async function writePng(outputPath, size) {
   const density = Math.min(144, Math.max(72, size * 2));
 
@@ -51,9 +56,6 @@ const pngSizes = [
   { file: "public/icon-192x192.png", size: 192 },
   { file: "public/icon-512x512.png", size: 512 },
 ];
-
-await fs.promises.mkdir(path.join(root, "app"), { recursive: true });
-await fs.promises.mkdir(path.join(root, "public"), { recursive: true });
 
 for (const { file, size } of pngSizes) {
   await writePng(path.join(root, file), size);
