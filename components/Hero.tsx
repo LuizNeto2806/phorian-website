@@ -17,10 +17,11 @@ export function Hero() {
       id="hero"
       className="relative flex h-svh snap-start snap-always flex-col items-center justify-center px-5 pb-16 pt-14 md:px-6 md:pb-0 md:pt-0"
     >
-      <header className="hero-fade absolute inset-x-0 top-0 z-40 flex h-14 w-full items-center justify-between gap-4 px-6 md:h-auto md:gap-0 md:px-8 md:pt-8">
-        <SocialLinksBar className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] md:flex-none md:overflow-visible [&::-webkit-scrollbar]:hidden" />
+      <SocialLinksBar className="hero-fade" />
+
+      <div className="hero-fade absolute top-4 right-4 z-40 flex h-11 items-center md:top-8 md:right-8 md:h-auto">
         <LanguageSwitcher />
-      </header>
+      </div>
 
       <div className="hero-fade flex w-full max-w-lg -translate-y-3 flex-col items-center md:-translate-y-4">
         <HeroLogo className="block h-auto w-[min(300px,78vw)] max-w-full invert md:w-[min(364px,85vw)]" />
