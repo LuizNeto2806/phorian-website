@@ -10,7 +10,7 @@ export function LanguageSwitcher() {
   return (
     <nav
       aria-label="Language"
-      className="flex h-11 items-center gap-1.5 text-sm font-normal tracking-[0.28em] text-white uppercase md:h-auto md:gap-1.5 md:text-[0.6875rem]"
+      className="flex h-11 items-center gap-1 text-sm font-normal tracking-[0.28em] text-white uppercase md:h-auto md:gap-1.5 md:text-[0.6875rem]"
     >
       {locales.map((code, index) => (
         <Fragment key={code}>

@@ -19,7 +19,7 @@ export function Hero() {
     >
       <SocialLinksBar className="hero-fade" />
 
-      <div className="hero-fade absolute top-4 right-4 z-40 flex h-11 items-center md:top-8 md:right-8 md:h-auto">
+      <div className="hero-fade absolute top-4 right-4 flex h-11 items-center md:top-8 md:right-8 md:h-auto">
         <LanguageSwitcher />
       </div>
 
