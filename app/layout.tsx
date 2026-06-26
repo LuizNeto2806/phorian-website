@@ -10,24 +10,47 @@ const archivo = Archivo({
   display: "swap",
 });
 
+const siteUrl = "https://phorian-website.vercel.app";
+
+const siteDescription =
+  "An artistic universe dedicated to translating philosophy, movement, nature and human experience into atmosphere through sound, image and contemplation.";
+
 export const metadata: Metadata = {
-  title: "PHORIAN — Música Cinematográfica",
-  description:
-    "Universo artístico de música eletrônica cinematográfica. Melodic Techno, Peak Time Techno, Ghost Production e Co-Produção.",
-  keywords: [
-    "PHORIAN",
-    "Melodic Techno",
-    "Peak Time Techno",
-    "Ghost Production",
-    "Co-Produção",
-    "música eletrônica",
-  ],
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "PHORIAN",
+    template: "%s — PHORIAN",
+  },
+  description: siteDescription,
+  applicationName: "PHORIAN",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
-    title: "PHORIAN — Música Cinematográfica",
-    description:
-      "Universo artístico onde som, contemplação e emoção se encontram.",
+    title: "PHORIAN",
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "PHORIAN",
+    locale: "en_US",
     type: "website",
-    locale: "pt_BR",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PHORIAN",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PHORIAN",
+    description: siteDescription,
+    images: ["/og-image.png"],
   },
 };
 

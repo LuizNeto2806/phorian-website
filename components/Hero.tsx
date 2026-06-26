@@ -17,8 +17,8 @@ export function Hero() {
       id="hero"
       className="relative flex h-svh snap-start snap-always flex-col items-center justify-center px-5 pb-16 pt-14 md:px-6 md:pb-0 md:pt-0"
     >
-      <header className="hero-fade absolute inset-x-0 top-0 z-40 flex h-14 items-center justify-between px-6 md:h-auto md:px-8 md:pt-8">
-        <SocialLinksBar />
+      <header className="hero-fade absolute inset-x-0 top-0 z-40 flex h-14 w-full items-center justify-between gap-4 px-6 md:h-auto md:gap-0 md:px-8 md:pt-8">
+        <SocialLinksBar className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] md:flex-none md:overflow-visible [&::-webkit-scrollbar]:hidden" />
         <LanguageSwitcher />
       </header>
 

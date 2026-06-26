@@ -3,9 +3,19 @@ import { Footer } from "@/components/Footer";
 import { Story } from "@/components/Story";
 
 export const metadata: Metadata = {
-  title: "Behind PHORIAN",
+  title: { absolute: "Behind PHORIAN" },
   description:
     "The story behind PHORIAN — an artistic universe where music, contemplation and emotion meet.",
+  openGraph: {
+    title: "Behind PHORIAN",
+    description:
+      "The story behind PHORIAN — an artistic universe where music, contemplation and emotion meet.",
+  },
+  twitter: {
+    title: "Behind PHORIAN",
+    description:
+      "The story behind PHORIAN — an artistic universe where music, contemplation and emotion meet.",
+  },
 };
 
 export default function StoryPage() {
