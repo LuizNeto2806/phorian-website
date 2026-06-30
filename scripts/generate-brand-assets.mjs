@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
+import toIco from "to-ico";
 
 const root = process.cwd();
 const faviconSvgPath = path.join(root, "app/icon.svg");
 const ogSymbolSvgPath = path.join(root, "public/images/phorian-symbol.svg");
+const iconVersion = "4";
 
 const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
 
@@ -16,16 +18,21 @@ await fs.promises.mkdir(path.join(root, "public"), { recursive: true });
 
 await fs.promises.copyFile(faviconSvgPath, path.join(root, "public/icon.svg"));
 
-async function writePng(outputPath, size) {
-  const density = Math.min(144, Math.max(72, size * 2));
+async function renderFaviconPng(size) {
+  const density = Math.min(384, Math.max(144, size * 8));
 
-  await sharp(faviconSvg, { density, limitInputPixels: false })
+  return sharp(faviconSvg, { density, limitInputPixels: false })
     .resize(size, size, {
       fit: "contain",
       background: transparent,
     })
     .png()
-    .toFile(outputPath);
+    .toBuffer();
+}
+
+async function writePng(outputPath, size) {
+  const png = await renderFaviconPng(size);
+  await fs.promises.writeFile(outputPath, png);
 }
 
 async function writeOgImage(outputPath) {
@@ -61,7 +68,15 @@ for (const { file, size } of pngSizes) {
   await writePng(path.join(root, file), size);
 }
 
+const icoSizes = [16, 32, 48];
+const icoBuffers = await Promise.all(icoSizes.map(renderFaviconPng));
+const ico = await toIco(icoBuffers);
+
+for (const file of ["app/favicon.ico", "public/favicon.ico"]) {
+  await fs.promises.writeFile(path.join(root, file), ico);
+}
+
 await writeOgImage(path.join(root, "public/og-image.png"));
 await writeOgImage(path.join(root, "app/opengraph-image.png"));
 
-console.log("Favicon assets generated from public/images/phorian-symbol.svg");
+console.log(`Favicon assets generated (v${iconVersion}) from app/icon.svg`);
