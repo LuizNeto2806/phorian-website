@@ -23,8 +23,8 @@ export function Hero() {
         <LanguageSwitcher />
       </div>
 
-      <div className="hero-fade flex w-full max-w-lg -translate-y-3 flex-col items-center md:-translate-y-4">
-        <HeroLogo className="block h-auto w-[min(300px,78vw)] max-w-full invert md:w-[min(364px,85vw)]" />
+      <div className="hero-fade flex w-full max-w-lg flex-col items-center">
+        <HeroLogo className="mx-auto block h-auto w-[min(210px,55vw)] max-w-full invert md:w-[min(255px,60vw)]" />
 
         <div className="mt-10 flex w-full justify-center md:mt-20">
           <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:justify-center md:gap-6">

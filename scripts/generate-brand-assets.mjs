@@ -6,7 +6,7 @@ import toIco from "to-ico";
 const root = process.cwd();
 const faviconSvgPath = path.join(root, "app/icon.svg");
 const ogSymbolSvgPath = path.join(root, "public/images/phorian-symbol.svg");
-const iconVersion = "4";
+const iconVersion = 5;
 
 const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
 
